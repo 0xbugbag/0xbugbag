@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>beo_hijau | Welcome</title><link href="https://0xbugbag.github.io/" rel="alternate"></link><link href="https://0xbugbag.github.io/feeds/all.atom.xml" rel="self"></link><id>https://0xbugbag.github.io/</id><updated>2024-07-03T11:20:00+07:00</updated><subtitle>Berani Bermimpi</subtitle><entry><title>Learn Python #2</title><link href="https://0xbugbag.github.io/2024/07/learn-python-2/" rel="alternate"></link><published>2024-07-03T11:20:00+07:00</published><updated>2024-07-03T11:20:00+07:00</updated><author><name>0xbugbag</name></author><id>tag:0xbugbag.github.io,2024-07-03:/2024/07/learn-python-2/</id><summary type="html">&lt;p&gt;In this post, I have written code to find fibonacci-prime number.&lt;/p&gt;</summary><content type="html">&lt;h2&gt;&lt;strong&gt;Code&lt;/strong&gt; &lt;img alt="Python Image" height="100" src="https://0xbugbag.github.io/images/python-logo.png" width="100"&gt;&lt;/h2&gt;
+&lt;p&gt;Syntax highlighting&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;get_fibo&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;fibo_nth&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="sd"&gt;    This function is used to get Fibonacci numbers.&lt;/span&gt;
+
+&lt;span class="sd"&gt;    Parameters:&lt;/span&gt;
+&lt;span class="sd"&gt;    - fibo_nth (int): Fibonacci numbers n-th F(n-th) as arguments&lt;/span&gt;
+
+&lt;span class="sd"&gt;    Returns:&lt;/span&gt;
+&lt;span class="sd"&gt;    - lst_fibo (int): the list consists of Fibonacci numbers&lt;/span&gt;
+&lt;span class="sd"&gt;    &amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+    &lt;span class="n"&gt;fnum&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="c1"&gt;# n=1, F1&lt;/span&gt;
+    &lt;span class="n"&gt;snum&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="c1"&gt;# n=2, F2&lt;/span&gt;
+    &lt;span class="n"&gt;lst_fibo&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[]&lt;/span&gt; &lt;span class="c1"&gt;# an empty list&lt;/span&gt;
+    &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;fibo_nth&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="c1"&gt;# The Fibonacci sequence&lt;/span&gt;
+        &lt;span class="nb"&gt;sum&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;fnum&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;snum&lt;/span&gt; &lt;span class="c1"&gt;# According to the recurrence: sum, fnum and snum&lt;/span&gt;
+        &lt;span class="n"&gt;fnum&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;snum&lt;/span&gt; &lt;span class="c1"&gt;# Then, shift fnum to snum&lt;/span&gt;
+        &lt;span class="n"&gt;snum&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;sum&lt;/span&gt; &lt;span class="c1"&gt;# Shift snum to sum, the operation will loop until fn&lt;/span&gt;
+        &lt;span class="n"&gt;lst_fibo&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;sum&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;# Append the sum to lst_fibo&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;lst_fibo&lt;/span&gt;
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;get_prime&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;num&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="sd"&gt;    This function is used to get prime numbers.&lt;/span&gt;
+
+&lt;span class="sd"&gt;    Parameters:&lt;/span&gt;
+&lt;span class="sd"&gt;    - num (int): fibonacci numbers as arguments&lt;/span&gt;
+
+&lt;span class="sd"&gt;    Returns:&lt;/span&gt;
+&lt;span class="sd"&gt;    - prime numbers (int): consist of prime numbers&lt;/span&gt;
+&lt;span class="sd"&gt;    &amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="c1"&gt;# To eliminate 0 and 1, not prime&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="kc"&gt;False&lt;/span&gt;
+    &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;num&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="c1"&gt;# To eliminate even numbers, not prime&lt;/span&gt;
+            &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="kc"&gt;False&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="kc"&gt;True&lt;/span&gt; &lt;span class="c1"&gt;# Return prime numbers&lt;/span&gt;
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;fibonacci_prime&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;head&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="sd"&gt;    This function is used to get the first `n` Fibonacci primes.&lt;/span&gt;
+&lt;span class="sd"&gt;    If `n` is less than 1 the return is invalid, since Fibonacci and primes numbers cannot be negative integers&lt;/span&gt;
+
+&lt;span class="sd"&gt;    Parameters:&lt;/span&gt;
+&lt;span class="sd"&gt;    - head (int): first numbers n-th as arguments&lt;/span&gt;
+
+&lt;span class="sd"&gt;    Returns:&lt;/span&gt;
+&lt;span class="sd"&gt;    - lst (int): the first `n` of th Fibonacci prime numbers&lt;/span&gt;
+&lt;span class="sd"&gt;    &amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;head&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;lst_first_n&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[]&lt;/span&gt; &lt;span class="c1"&gt;# Empty list to store Fibonacci primes&lt;/span&gt;
+        &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;fibo_prime&lt;/span&gt;&lt;span class="p"&gt;)):&lt;/span&gt;
+            &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="n"&gt;head&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+                &lt;span class="k"&gt;break&lt;/span&gt;
+            &lt;span class="n"&gt;lst_first_n&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;fibo_prime&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;        
+    &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="c1"&gt;# Since Fibonacci and primes numbers cannot be negative integers&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Invalid number. Should be greater than 0&amp;#39;&lt;/span&gt;
+
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;lst_first_n&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Define a varibale of Fibonacci numbers n-th F(n-th)&lt;/span&gt;
+&lt;span class="n"&gt;fibo_nth&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;43&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Call get_fibo function&lt;/span&gt;
+&lt;span class="n"&gt;fibo_num&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;get_fibo&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;fibo_nth&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Call get_prime function within list comprehension to get list of Fibonacci prime numbers&lt;/span&gt;
+&lt;span class="n"&gt;fibo_prime&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;fibo_num&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;get_prime&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;num&lt;/span&gt;&lt;span class="p"&gt;)]&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Input number to print result of n-th numbers&lt;/span&gt;
+&lt;span class="n"&gt;head&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;input&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Input n-numbers: &amp;#39;&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Call fibonacci_prime function to get the first `n` of th Fibonacci prime numbers&lt;/span&gt;
+&lt;span class="n"&gt;res&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;fibonacci_prime&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;head&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Print result&lt;/span&gt;
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;fibonacci_prime(n = &lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;head&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s1"&gt;)&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;res&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="blog, python"></category><category term="python"></category></entry><entry><title>Learn Markdown</title><link href="https://0xbugbag.github.io/2024/07/learn-markdown/" rel="alternate"></link><published>2024-07-03T10:20:00+07:00</published><updated>2024-07-03T11:20:00+07:00</updated><author><name>0xbugbag</name></author><id>tag:0xbugbag.github.io,2024-07-03:/2024/07/learn-markdown/</id><summary type="html">&lt;p&gt;In this article, I have written my first article using Markdown.&lt;/p&gt;</summary><content type="html">&lt;p&gt;This is an example from &lt;a href="https://markdown-it.github.io/"&gt;https://markdown-it.github.io/&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1&gt;h1 Heading&lt;/h1&gt;
+&lt;h2&gt;h2 Heading&lt;/h2&gt;
+&lt;h3&gt;h3 Heading&lt;/h3&gt;
+&lt;h4&gt;h4 Heading&lt;/h4&gt;
+&lt;h5&gt;h5 Heading&lt;/h5&gt;
+&lt;h6&gt;h6 Heading&lt;/h6&gt;
+&lt;h2&gt;Horizontal Rules&lt;/h2&gt;
+&lt;hr&gt;
+&lt;hr&gt;
+&lt;hr&gt;
+&lt;h2&gt;Emphasis&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;This is bold text&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;This is bold text&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;This is italic text&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;This is italic text&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;~~Strikethrough~~&lt;/p&gt;
+&lt;h2&gt;Blockquotes&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Blockquotes can also be nested...&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;...by using additional greater-than signs right next to each other...&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;...or with spaces between arrows.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;Lists&lt;/h2&gt;
+&lt;p&gt;Unordered&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Create a list by starting a line with &lt;code&gt;+&lt;/code&gt;, &lt;code&gt;-&lt;/code&gt;, or &lt;code&gt;*&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Sub-lists are made by indenting 2 spaces:&lt;/li&gt;
+&lt;li&gt;Marker character change forces new list start:&lt;ul&gt;
+&lt;li&gt;Ac tristique libero volutpat at&lt;/li&gt;
+&lt;li&gt;Facilisis in pretium nisl aliquet&lt;/li&gt;
+&lt;li&gt;Nulla volutpat aliquam velit&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Very easy!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Ordered&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Lorem ipsum dolor sit amet&lt;/li&gt;
+&lt;li&gt;Consectetur adipiscing elit&lt;/li&gt;
+&lt;li&gt;Integer molestie lorem at massa&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;Code&lt;/h2&gt;
+&lt;p&gt;Inline &lt;code&gt;code&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Indented code&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;// Some comments&lt;/span&gt;
+&lt;span class="n"&gt;line&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;of&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;code&lt;/span&gt;
+&lt;span class="n"&gt;line&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;of&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;code&lt;/span&gt;
+&lt;span class="n"&gt;line&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;of&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;code&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Block code "fences"&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;Sample text here...
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Syntax highlighting&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;numbers&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;9&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;8&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;number&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;enumerate&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;numbers&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="nb"&gt;print&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;number&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;message&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Hello World&amp;quot;&lt;/span&gt;
+&lt;span class="n"&gt;hello&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;message&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;hello&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;message&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="nb"&gt;print&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;message&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2&gt;Tables&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Option&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;data&lt;/td&gt;
+&lt;td&gt;path to data files to supply the data that will be passed into templates.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;engine&lt;/td&gt;
+&lt;td&gt;engine to be used for processing templates. Handlebars is the default.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;ext&lt;/td&gt;
+&lt;td&gt;extension to be used for dest files.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Right aligned columns&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style="text-align: right;"&gt;Option&lt;/th&gt;
+&lt;th style="text-align: right;"&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style="text-align: right;"&gt;data&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;path to data files to supply the data that will be passed into templates.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: right;"&gt;engine&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;engine to be used for processing templates. Handlebars is the default.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: right;"&gt;ext&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;extension to be used for dest files.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2&gt;Links&lt;/h2&gt;
+&lt;p&gt;&lt;a href="http://dev.nodeca.com"&gt;link text&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://nodeca.github.io/pica/demo/" title="title text!"&gt;link with title&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Images&lt;/h2&gt;</content><category term="blog"></category><category term="pelican"></category><category term="markdown"></category></entry><entry><title>Belajar Python #1</title><link href="https://0xbugbag.github.io/2024/07/under-construction/" rel="alternate"></link><published>2024-07-03T10:20:00+07:00</published><updated>0024-07-03T13:50:00+07:07</updated><author><name>0xbugbag</name></author><id>tag:0xbugbag.github.io,2024-07-03:/2024/07/under-construction/</id><summary type="html">&lt;p&gt;Under Construction&lt;/p&gt;</summary><content type="html">&lt;p&gt;Under Construction&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;         \      ____
+    ()   /\   __|   |
+  /|  |\/  __|      |
+   |/\|   |         |
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;hr&gt;</content><category term="blog, python"></category><category term="pelican"></category><category term="python"></category></entry></feed>
