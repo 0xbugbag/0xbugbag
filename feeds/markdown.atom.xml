@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>beo_hijau | Welcome - blog</title><link href="https://0xbugbag.github.io/" rel="alternate"></link><link href="https://0xbugbag.github.io/feeds/blog.atom.xml" rel="self"></link><id>https://0xbugbag.github.io/</id><updated>2024-07-03T11:20:00+07:00</updated><subtitle>Berani Bermimpi</subtitle><entry><title>Learn Markdown</title><link href="https://0xbugbag.github.io/2024/07/learn-markdown/" rel="alternate"></link><published>2024-07-03T10:20:00+07:00</published><updated>2024-07-03T11:20:00+07:00</updated><author><name>0xbugbag</name></author><id>tag:0xbugbag.github.io,2024-07-03:/2024/07/learn-markdown/</id><summary type="html">&lt;p&gt;In this article, I have written my first article using Markdown.&lt;/p&gt;</summary><content type="html">&lt;p&gt;This is an example from &lt;a href="https://markdown-it.github.io/"&gt;https://markdown-it.github.io/&lt;/a&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>beo_hijau | Welcome - markdown</title><link href="https://0xbugbag.github.io/" rel="alternate"></link><link href="https://0xbugbag.github.io/feeds/markdown.atom.xml" rel="self"></link><id>https://0xbugbag.github.io/</id><updated>2024-07-03T11:20:00+07:00</updated><subtitle>Berani Bermimpi</subtitle><entry><title>Learn Markdown</title><link href="https://0xbugbag.github.io/2024/07/learn-markdown/" rel="alternate"></link><published>2024-07-03T10:20:00+07:00</published><updated>2024-07-03T11:20:00+07:00</updated><author><name>0xbugbag</name></author><id>tag:0xbugbag.github.io,2024-07-03:/2024/07/learn-markdown/</id><summary type="html">&lt;p&gt;In this article, I have written my first article using Markdown.&lt;/p&gt;</summary><content type="html">&lt;p&gt;This is an example from &lt;a href="https://markdown-it.github.io/" target="_blank"&gt;https://markdown-it.github.io/&lt;/a&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h1&gt;h1 Heading&lt;/h1&gt;
 &lt;h2&gt;h2 Heading&lt;/h2&gt;
@@ -119,4 +119,4 @@
 &lt;h2&gt;Links&lt;/h2&gt;
 &lt;p&gt;&lt;a href="http://dev.nodeca.com"&gt;link text&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://nodeca.github.io/pica/demo/" title="title text!"&gt;link with title&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;Images&lt;/h2&gt;</content><category term="blog"></category><category term="pelican"></category><category term="markdown"></category></entry></feed>
+&lt;h2&gt;Images&lt;/h2&gt;</content><category term="markdown"></category><category term="pelican"></category><category term="markdown"></category></entry></feed>
