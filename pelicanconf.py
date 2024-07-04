@@ -5,8 +5,8 @@ SITENAME = 'beo_hijau | Welcome'
 SITEURL = "http://localhost:8000"
 SITETITLE = 'beo_hijau'
 SITESUBTITLE = 'Berani Bermimpi'
-SITELOGO = SITEURL + '/images/profile.png'
-FAVICON = SITEURL + '/favicon.ico'
+SITELOGO = '/images/profile.png'
+#FAVICON = 'images/favicon.ico'
 CUSTOM_CSS = 'static/custom.css'
 
 
