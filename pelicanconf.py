@@ -5,8 +5,8 @@ SITENAME = 'beo_hijau | Welcome'
 SITEURL = "http://localhost:8000"
 SITETITLE = 'beo_hijau'
 SITESUBTITLE = 'Berani Bermimpi'
-SITELOGO = 'images/profile.png'
-#FAVICON = 'images/favicon.ico'
+SITELOGO = SITEURL + '/images/profile.png'
+FAVICON = SITEURL + '/favicon.ico'
 CUSTOM_CSS = 'static/custom.css'
 
 
@@ -27,10 +27,10 @@ SITEMAP = {
 
 PATH = "content"
 
-STATIC_PATHS = ['images', 'extra']
+STATIC_PATHS = ['images', 'static']
 
 EXTRA_PATH_METADATA = {
-    'extra/custom.css': {'path': 'static/custom.css'},
+    'static/custom.css': {'path': 'static/custom.css'},
     #'extra/robots.txt': {'path': 'robots.txt'},
     'images/favicon.ico': {'path': 'favicon.ico'},
     #'extra/CNAME': {'path': 'CNAME'},
@@ -49,13 +49,16 @@ DATE_FORMATS = {
 }
 
 MAIN_MENU = True
-MENUITEMS = (('Archives', '/archives'),('Categories', '/categories'),('Tags', '/tags'))
+MENUITEMS = (
+    ('Archives', '/archives.html'),
+    ('Categories', '/categories.html'),
+    ('Tags', '/tags.html'),)
 
 # Code highlight the Theme
 PYGMENTS_STYLE = 'friendly'
 
 ARTICLE_URL = '{date:%Y}/{date:%m}/{slug}/'
-ARTICLE_SAVE_AS = ARTICLE_URL + 'index.html'
+ARTICLE_SAVE_AS = '{date:%Y}/{date:%m}/{slug}/' + 'index.html' 
 
 PAGE_URL = '{slug}/'
 PAGE_SAVE_AS = PAGE_URL + 'index.html'
@@ -83,11 +86,20 @@ FEED_USE_SUMMARY = True
 #    ("You can modify those links in your config file", "#"),
 #)
 
+CC_LICENSE = {
+    'name': 'Creative Commons Attribution-ShareAlike',
+    'version': '4.0',
+    'slug': 'by-sa'
+}
+
+COPYRIGHT_NAME = '0xp_'
 COPYRIGHT_YEAR = datetime.now().year
 DEFAULT_PAGINATION = 5
 
 # Uncomment following line if you want document-relative URLs when developing
 # RELATIVE_URLS = True
+
+DISABLE_URL_HASH = True
 
 THEME = 'themes/Flex'
 

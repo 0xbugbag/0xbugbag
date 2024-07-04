@@ -1,7 +1,7 @@
 Title: Learn Python #2
 Date: 2024-07-03 11:20
 Modified: 2024-07-03 11:20
-Category: blog, python
+Category: python
 Slug: learn-python-2
 Summary: In this post, I have written code to find fibonacci-prime number.
 Tags: python

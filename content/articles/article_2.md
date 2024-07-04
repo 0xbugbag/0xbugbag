@@ -1,14 +1,14 @@
 Title: Learn Markdown
 Date: 2024-07-03 10:20
 Modified: 2024-07-03 11:20
-Category: blog
+Category: markdown
 Slug: learn-markdown
 Summary: In this article, I have written my first article using Markdown.
 Tags: pelican, markdown
 Authors: 0xbugbag
 Status: published
 
-This is an example from [https://markdown-it.github.io/](https://markdown-it.github.io/)
+This is an example from [https://markdown-it.github.io/](https://markdown-it.github.io/){:target="_blank"}
 
 ---
 
