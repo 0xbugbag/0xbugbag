@@ -110,6 +110,6 @@ THEME = 'themes/Flex'
 SOCIAL = (
     ('github', 'https://github.com/0xbugbag'),
     ('envelope', 'mailto:0xpotchgen.ui@gmail.com'),
-    ('linkedin','https://np.linkedin.com/id/hanumaditya'),
+    ('linkedin','https://linkedin.com/in/hanumaditya'),
     ('twitter','https://twitter.com/sxbugbag'),
 )

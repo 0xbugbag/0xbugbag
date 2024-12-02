@@ -62,8 +62,11 @@ target/
 
 pelican-plugins
 themes
-.venv/
+.env/
 output
 *.pid
+.envfile
+Makefile#2.0.txt
+.travis.yml
 
 .vscode/
