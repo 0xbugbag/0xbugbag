@@ -1,0 +1,1151 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="http://localhost:8000/theme/stylesheet/style.min.css">
+
+
+    <link id="pygments-light-theme" rel="stylesheet" type="text/css"
+          href="http://localhost:8000/theme/pygments/friendly.min.css">
+
+
+
+  <link rel="stylesheet" type="text/css" href="http://localhost:8000/theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="http://localhost:8000/theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="http://localhost:8000/theme/font-awesome/css/solid.css">
+
+  <link rel="stylesheet" type="text/css" href="http://localhost:8000/static/custom.css">
+
+
+
+  <link href="http://localhost:8000/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="beo_hijau | Welcome Atom">
+
+
+
+
+
+
+
+
+ 
+
+<meta name="author" content="0xbugbag" />
+<meta name="description" content="In this post, I have learned to prepare datasets for use in machine learning." />
+<meta name="keywords" content="machine learning, jupyterlab, data science">
+
+
+  <meta property="og:site_name" content="beo_hijau | Welcome"/>
+  <meta property="og:title" content="Introduction to Machine Learning with Pacmann"/>
+  <meta property="og:description" content="In this post, I have learned to prepare datasets for use in machine learning."/>
+  <meta property="og:locale" content="en_US"/>
+  <meta property="og:url" content="http://localhost:8000/2024/12/machine-learning-project-with-pacmann-1/"/>
+  <meta property="og:type" content="article"/>
+  <meta property="article:published_time" content="2024-12-02 15:00:00+07:00"/>
+  <meta property="article:modified_time" content="2024-12-02 15:00:00+07:00"/>
+  <meta property="article:author" content="http://localhost:8000/author/0xbugbag.html">
+  <meta property="article:section" content="machine learning"/>
+  <meta property="article:tag" content="machine learning"/>
+  <meta property="article:tag" content="jupyterlab"/>
+  <meta property="article:tag" content="data science"/>
+  <meta property="og:image" content="/images/profile.png">
+
+  <title>beo_hijau | Welcome &ndash; Introduction to Machine Learning with Pacmann</title>
+
+
+</head>
+<body class="light-theme">
+
+<aside>
+  <div>
+    <a href="http://localhost:8000/">
+      <img src="/images/profile.png" alt="beo_hijau" title="beo_hijau">
+    </a>
+
+    <h1>
+      <a href="http://localhost:8000/">beo_hijau</a>
+    </h1>
+
+    <p>Berani Bermimpi</p>
+
+
+    <nav>
+      <ul class="list">
+
+
+            <li>
+              <a target="_self"
+                 href="http://localhost:8000/about/">
+                About
+              </a>
+            </li>
+            <li>
+              <a target="_self"
+                 href="http://localhost:8000/contact/">
+                Contact
+              </a>
+            </li>
+
+      </ul>
+    </nav>
+
+    <ul class="social">
+      <li>
+        <a class="sc-github"
+           href="https://github.com/0xbugbag"
+           target="_blank">
+          <i class="fa-brands fa-github"></i>
+        </a>
+      </li>
+      <li>
+        <a class="sc-envelope"
+rel="me"           href="mailto:0xpotchgen.ui@gmail.com"
+           target="_blank">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+      </li>
+      <li>
+        <a class="sc-linkedin"
+           href="https://linkedin.com/in/hanumaditya"
+           target="_blank">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="sc-twitter"
+           href="https://twitter.com/sxbugbag"
+           target="_blank">
+          <i class="fa-brands fa-twitter"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+</aside>
+  <main>
+
+<nav>
+  <a href="http://localhost:8000/">Home</a>
+
+  <a href="/archives.html">Archives</a>
+  <a href="/categories.html">Categories</a>
+  <a href="/tags.html">Tags</a>
+
+  <a href="http://localhost:8000/feeds/all.atom.xml">Atom</a>
+
+</nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="machine-learning-project-with-pacmann-1" class="post-title"><span class="title-bold">Introduction to Machine Learning with Pacmann</span></h1>
+    <p>
+      Posted on December 02, 2024 in <a href="http://localhost:8000/category/machine-learning.html">machine learning</a>
+
+    </p>
+  </header>
+
+
+  <div>
+    <h1>!/usr/bin/env python</h1>
+<h1>coding: utf-8</h1>
+<h1># Mentoring 1 - Introduction to Machine Learning</h1>
+<h1>---</h1>
+<h1></h1>
+<h1>Mentoring Session - Job Preparation Program - Pacmann AI</h1>
+<h1>## Instructions</h1>
+<h1>---</h1>
+<h1>1. Please fill all the given tasks in here</h1>
+<h1>2. You can use any library</h1>
+<h1>3. For modeling, please use <code>sklearn</code> library</h1>
+<h1>4. You are taksed to create a function based machine learning model. (If you cannot create the functions from the start, you can create without a function first, then put it all into a function)</h1>
+<h1>5. Make sure you are following all the function descriptions</h1>
+<h1>6. Submit your result to the submission form</h1>
+<h1>## Dataset Description</h1>
+<h1>---</h1>
+<h1><strong>Note</strong></h1>
+<h1></h1>
+<h1>- This dataset originally comes from <a href="https://www.kaggle.com/datasets/yasserh/uber-fares-dataset">Uber Fares Dataset</a></h1>
+<h1>- We perform several edit for this mentoring purposes. So, please use the dataset from <a href="https://drive.google.com/file/d/1-Fr3OMbI1yKU_jNy-6cgXFJDVzjph3sn/view?usp=sharing">here</a>.</h1>
+<h1></h1>
+<h1><strong>Description</strong></h1>
+<h1>- We're looking to predict the fare of Uber's transactions.</h1>
+<h1>- The dataset contains of the following fields</h1>
+<h1></h1>
+<h1><center></h1>
+<h1></h1>
+<h1>|Feature|Type|Descriptions|</h1>
+<h1>|:--|:--|:--|</h1>
+<h1>|<code>order_id</code>| <code>int</code> | a unique identifier for each trip|</h1>
+<h1>|<code>pickup_time</code> | <code>str</code> | a class of pickup time. <code>04-10</code>, <code>10-16</code>, <code>16-22</code>, <code>22-04</code>. E.g. <code>04-10</code> means the pickup time is between 04.00 to 10.00|</h1>
+<h1>| <code>pickup_longitude</code> | <code>float</code> | the longitude where the meter was engaged|</h1>
+<h1>| <code>pickup_latitude</code> | <code>float</code> | the latitude where the meter was engaged|</h1>
+<h1>| <code>dropoff_longitude</code> | <code>float</code> | the longitude where the meter was disengaged|</h1>
+<h1>| <code>dropoff_latitude</code> | <code>float</code> | the latitude where the meter was disengaged|</h1>
+<h1>| <code>passenger_count</code> | <code>float</code> | the number of passengers in the vehicle (driver entered value)|</h1>
+<h1>| <code>fare_amount</code> | <code>int</code> | the cost of each trip in USD, (<strong>our target</strong>)|</h1>
+<h1>## Modeling Workflow</h1>
+<h1>---</h1>
+<h1>```</h1>
+<h1>1. Import data to Python</h1>
+<h1>2. Data Preprocessing</h1>
+<h1>3. Training a Machine Learning Models</h1>
+<h1>4. Test Prediction</h1>
+<h1>```</h1>
+<h1>### 1. Import data to Python (10 pts)</h1>
+<h1>---</h1>
+<h1>In[2]:</h1>
+<h6></h6>
+<h1>Import Numpy and Pandas library</h1>
+<h1>Write your code here</h1>
+<h6></h6>
+<p>import pandas as pd
+import numpy as np
+from sklearn.model_selection import train_test_split
+from sklearn.impute import SimpleImputer
+from sklearn.preprocessing import OneHotEncoder, StandardScaler
+from sklearn.metrics import mean_squared_error
+from sklearn.dummy import DummyRegressor
+from sklearn.neighbors import KNeighborsRegressor</p>
+<h1>In[3]:</h1>
+<h6></h6>
+<h1>Create a function named read_data</h1>
+<h1>- Has an input of filename, i.e. fname</h1>
+<h1>- Read the data as a Pandas DataFrame</h1>
+<h1>- Drop duplicate on <code>order_id</code>, keep the last ones</h1>
+<h1>- Set <code>order_id</code> as index</h1>
+<h1>- Print the data shape</h1>
+<h1>- Return the dataset</h1>
+<h1>Write your code here</h1>
+<h6></h6>
+<p>def read_data(fname):
+    """
+    Read and preprocess the dataset.</p>
+<div class="highlight"><pre><span></span><code><span class="n">Parameters</span><span class="o">:</span>
+<span class="o">-</span><span class="w"> </span><span class="n">fname</span><span class="w"> </span><span class="p">(</span><span class="n">str</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="n">The</span><span class="w"> </span><span class="n">filename</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">dataset</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="k">read</span><span class="p">.</span>
+
+<span class="k">Returns</span><span class="o">:</span>
+<span class="o">-</span><span class="w"> </span><span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="o">:</span><span class="w"> </span><span class="n">The</span><span class="w"> </span><span class="n">processed</span><span class="w"> </span><span class="n">dataset</span><span class="p">.</span>
+<span class="s2">&quot;</span><span class="se">&quot;&quot;</span>
+<span class="s2">with open(fname, &#39;r&#39;) as f: </span>
+<span class="s2">    df = pd.read_csv(f, sep=&#39;,&#39;, header=0)</span>
+<span class="s2">    print(f&#39;Data shape rawd: {df.shape}&#39;)</span>
+
+<span class="s2">    # Drop duplicate on `order_id`, keep the last ones</span>
+<span class="s2">    # Set `order_id` as index</span>
+<span class="s2">    df = df.drop_duplicates(subset=&#39;order_id&#39;, keep=&#39;last&#39;) </span>
+<span class="s2">    df_count_dup = df.duplicated(subset=&#39;order_id&#39;).sum()</span>
+<span class="s2">    print(f&#39;Number of duplicate order id: {df_count_dup}&#39;)</span>
+<span class="s2">    print(f&#39;Data shape after dropping: {df.shape}&#39;)</span>
+
+<span class="s2">    df =df.set_index(&#39;order_id&#39;, inplace=False)</span>
+<span class="s2">    print(f&#39;Data shape final: {df.shape}&#39;)</span>
+
+<span class="s2">    return df</span>
+</code></pre></div>
+
+<h1>In[3]:</h1>
+<h1>Read the Uber data (JUST RUN THE CODE)</h1>
+<p>data = read_data(fname='uber_edit.csv')</p>
+<h1>In[4]:</h1>
+<h1>JUST RUN THE CODE</h1>
+<p>data.head()</p>
+<h1>### 2. Data Preprocessing (60 pts)</h1>
+<h1>---</h1>
+<h1><strong>The processing pipeline</strong></h1>
+<h1>```</h1>
+<h1>2.1 Input-Output Split</h1>
+<h1>2.2 Train-Valid-Test Split</h1>
+<h1>2.3 Separate Numerical and Categorical Features</h1>
+<h1>2.4 Numerical Imputation</h1>
+<h1>2.5 Categorical Imputation</h1>
+<h1>2.6 Preprocess Categorical Features</h1>
+<h1>2.7 Join the Data</h1>
+<h1>2.8 Feature Engineering the Data</h1>
+<h1>2.9 Create a Preprocessing Function</h1>
+<h1>```</h1>
+<h1>#### 2.1. Input-Output Split (6 pts)</h1>
+<h1>---</h1>
+<h1>- We're going to split input &amp; output according to the modeling objective.</h1>
+<h1>- Create a function to split the input &amp; output</h1>
+<h1>In[5]:</h1>
+<h6></h6>
+<h1>Create a function named split_input_output</h1>
+<h1>- Has two arguments</h1>
+<h1>- data, a pd Dataframe</h1>
+<h1>- target_col, a column (str)</h1>
+<h1>- Print the data shape after splitting</h1>
+<h1>- Return X, y</h1>
+<h1>Write your code here</h1>
+<h6></h6>
+<p>def split_input_output(data, target_col):
+    """
+    Splits the input data into features (X) and target (y).</p>
+<div class="highlight"><pre><span></span><code><span class="k">Parameters</span><span class="err">:</span>
+<span class="o">-</span><span class="w"> </span><span class="k">data</span><span class="w"> </span><span class="p">(</span><span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">)</span><span class="err">:</span><span class="w"> </span><span class="n">The</span><span class="w"> </span><span class="k">input</span><span class="w"> </span><span class="n">dataset</span><span class="p">.</span>
+<span class="o">-</span><span class="w"> </span><span class="n">target_col</span><span class="w"> </span><span class="p">(</span><span class="nf">str</span><span class="p">)</span><span class="err">:</span><span class="w"> </span><span class="n">The</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">target</span><span class="w"> </span><span class="k">column</span><span class="p">.</span>
+
+<span class="k">Returns</span><span class="err">:</span>
+<span class="o">-</span><span class="w"> </span><span class="n">X</span><span class="w"> </span><span class="p">(</span><span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">)</span><span class="err">:</span><span class="w"> </span><span class="n">The</span><span class="w"> </span><span class="n">feature</span><span class="w"> </span><span class="n">columns</span><span class="p">.</span>
+<span class="o">-</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="p">(</span><span class="n">pd</span><span class="p">.</span><span class="n">Series</span><span class="p">)</span><span class="err">:</span><span class="w"> </span><span class="n">The</span><span class="w"> </span><span class="n">target</span><span class="w"> </span><span class="k">column</span><span class="p">.</span>
+<span class="ss">&quot;&quot;</span><span class="err">&quot;</span>
+<span class="n">X</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">data</span><span class="p">.</span><span class="k">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=[</span><span class="n">target_col</span><span class="o">]</span><span class="p">)</span>
+<span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">data</span><span class="o">[</span><span class="n">target_col</span><span class="o">]</span>
+<span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;X shape: {X.shape}&#39;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;y shape: {y.shape}&#39;</span><span class="p">)</span>
+
+<span class="k">return</span><span class="w"> </span><span class="n">X</span><span class="p">,</span><span class="w"> </span><span class="n">y</span>
+</code></pre></div>
+
+<h1>In[6]:</h1>
+<h1>Load the train data only (JUST RUN THE CODE)</h1>
+<p>X, y = split_input_output(data=data,
+                          target_col='fare_amount')</p>
+<h1>In[7]:</h1>
+<p>X.head()  # (JUST RUN THE CODE)</p>
+<h1>In[8]:</h1>
+<p>y.head()  # (JUST RUN THE CODE)</p>
+<h1>#### 2.2. Train-Valid-Test Split (6 pts)</h1>
+<h1>---</h1>
+<h1>- Now, we want to split the data before modeling.</h1>
+<h1>- Split the data into three set:</h1>
+<h1>- Train, for training the model</h1>
+<h1>- Validation, for choosing the best model</h1>
+<h1>- Test, for error generalization</h1>
+<h1></h1>
+<h1>- You should make the splitting proportion train (80%), valid (10%), and test (10%)</h1>
+<h1>In[9]:</h1>
+<h6></h6>
+<h1>Create a function named split_train_test</h1>
+<h1>- Has two arguments</h1>
+<h1>- X, the input (pd.Dataframe)</h1>
+<h1>- y, the output (pd.Dataframe)</h1>
+<h1>- test_size, the test size between 0-1 (float)</h1>
+<h1>- seed, the random state (int)</h1>
+<h1>- Print the data shape after splitting</h1>
+<h1>- Return X_train, X_test, y_train, y_test</h1>
+<h1>- You can use an sklearn library to help you</h1>
+<h1>Write your code here</h1>
+<h6></h6>
+<p>def split_train_test(X, y, test_size, seed):
+    """
+    Split the input data (X) and target data (y) into train and test sets.</p>
+<div class="highlight"><pre><span></span><code>Parameters:
+<span class="k">-</span> X (pd.DataFrame): The input features.
+<span class="k">-</span> y (pd.DataFrame or pd.Series): The target labels.
+<span class="k">-</span> test_size (float): The proportion of the dataset to include in the test split (0-1).
+<span class="k">-</span> seed (int): The random seed for reproducibility.
+
+Returns:
+<span class="k">-</span> X_train (pd.DataFrame): Training input data.
+<span class="k">-</span> X_test (pd.DataFrame): Testing input data.
+<span class="k">-</span> y_train (pd.DataFrame or pd.Series): Training output data.
+<span class="k">-</span> y_test (pd.DataFrame or pd.Series): Testing output data.
+&quot;&quot;&quot;
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=test_size, random_state=seed)
+
+print(f&#39;X train shape: {X_train.shape}&#39;)
+print(f&#39;y train shape: {y_train.shape}&#39;)
+print(f&#39;X test shape : {X_test.shape}&#39;)
+print(f&#39;y test shape : {y_test.shape}\n&#39;)
+
+return X_train, X_test, y_train, y_test
+</code></pre></div>
+
+<h1>In[10]:</h1>
+<h1>Split the data</h1>
+<h1>First, split the train &amp; not train</h1>
+<p>X_train, X_not_train, y_train, y_not_train = split_train_test(X, y, test_size=0.2, seed=123) # WRITE YOUR CODE HERE, Use seed=123</p>
+<h1>Then, split the valid &amp; test</h1>
+<p>X_valid, X_test, y_valid, y_test = split_train_test(X_not_train, y_not_train, test_size=0.5, seed=123) # WRITE YOUR CODE HERE, Use seed=123</p>
+<h1>In[11]:</h1>
+<h1>Validate (JUST RUN THE CODE)</h1>
+<p>print(len(X_train)/len(X))  # should be 0.8
+print(len(X_valid)/len(X))  # should be 0.1
+print(len(X_test)/len(X))   # should be 0.1</p>
+<h1>In[12]:</h1>
+<p>X_train.head()  # (JUST RUN THE CODE)</p>
+<h1>#### 2.3. Separate Numerical and Categorical Features (6 pts)</h1>
+<h1>---</h1>
+<h1>- We now prepare to perform data preprocessing</h1>
+<h1>- But, we first separate the data into numerical data &amp; categorical data.</h1>
+<h1>In[13]:</h1>
+<h6></h6>
+<h1>Create a function to split numerical &amp; categorical input</h1>
+<h1>- you have three parameters</h1>
+<h1>- data, an input data (pd. Dataframe)</h1>
+<h1>- num_cols, a list of numerical columns (list)</h1>
+<h1>- cat_cols, a list of categorical columns (list)</h1>
+<h1>- and write a validation that you perform right operation</h1>
+<h1>- and return two dataframe, numerical &amp; categorical data</h1>
+<h1>Write your code here</h1>
+<h6></h6>
+<p>def split_num_cat(data, num_cols,cat_cols):
+    """
+    Split the input DataFrame into numerical and categorical DataFrames based on the provided lists of columns.</p>
+<div class="highlight"><pre><span></span><code><span class="k">Parameters</span><span class="err">:</span>
+<span class="o">-</span><span class="w"> </span><span class="k">data</span><span class="err">:</span><span class="w"> </span><span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">,</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">input</span><span class="w"> </span><span class="k">data</span><span class="p">.</span>
+<span class="o">-</span><span class="w"> </span><span class="nl">num_cols</span><span class="p">:</span><span class="w"> </span><span class="n">list</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">list</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">numerical</span><span class="w"> </span><span class="n">columns</span><span class="p">.</span>
+<span class="o">-</span><span class="w"> </span><span class="nl">cat_cols</span><span class="p">:</span><span class="w"> </span><span class="n">list</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">list</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">categorical</span><span class="w"> </span><span class="n">columns</span><span class="p">.</span>
+
+<span class="k">Returns</span><span class="err">:</span>
+<span class="o">-</span><span class="w"> </span><span class="nl">numerical_cols</span><span class="p">:</span><span class="w"> </span><span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">.</span>
+<span class="o">-</span><span class="w"> </span><span class="nl">categorical_cols</span><span class="p">:</span><span class="w"> </span><span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">.</span>
+<span class="ss">&quot;&quot;&quot;</span>
+<span class="ss"># Validate that the input columns exist in the DataFrame</span>
+<span class="ss">for col in num_cols + cat_cols:</span>
+<span class="ss">    if col not in data.columns:</span>
+<span class="ss">        raise ValueError(f&quot;</span><span class="k">Column</span><span class="w"> </span><span class="s1">&#39;{col}&#39;</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="k">found</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">input</span><span class="w"> </span><span class="n">DataFrame</span><span class="p">.</span><span class="ss">&quot;)</span>
+
+<span class="ss"># Validate that there is no overlap between numerical and categorical columns</span>
+<span class="ss">overlap = set(num_cols).intersection(set(cat_cols))</span>
+<span class="ss">if overlap:</span>
+<span class="ss">    raise ValueError(f&quot;</span><span class="n">Columns</span><span class="w"> </span><span class="err">{</span><span class="n">overlap</span><span class="err">}</span><span class="w"> </span><span class="k">are</span><span class="w"> </span><span class="n">present</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="k">both</span><span class="w"> </span><span class="n">numerical</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">categorical</span><span class="w"> </span><span class="n">lists</span><span class="p">.</span><span class="err">&quot;</span><span class="p">)</span>
+
+<span class="err">#</span><span class="w"> </span><span class="n">Split</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">data</span><span class="w"> </span><span class="k">into</span><span class="w"> </span><span class="n">numerical</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">categorical</span><span class="w"> </span><span class="n">DataFrames</span>
+<span class="n">numerical_cols</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">data</span><span class="o">[</span><span class="n">num_cols</span><span class="o">]</span>
+<span class="n">categorical_cols</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">data</span><span class="o">[</span><span class="n">cat_cols</span><span class="o">]</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;Data num shape: {numerical_cols.shape}&#39;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;Data cat shape: {categorical_cols.shape}&#39;</span><span class="p">)</span>
+
+<span class="k">return</span><span class="w"> </span><span class="n">numerical_cols</span><span class="p">,</span><span class="w"> </span><span class="n">categorical_cols</span>
+</code></pre></div>
+
+<p>num_cols = ['pickup_longitude','pickup_latitude','dropoff_longitude','dropoff_latitude','passenger_count']
+cat_cols = ['pickup_time']</p>
+<h1>In[14]:</h1>
+<h1>Split the data</h1>
+<p>X_train_num, X_train_cat = split_num_cat(X_train, num_cols, cat_cols) # WRITE YOUR CODE HERE</p>
+<h1>In[15]:</h1>
+<p>X_train_num.head()  # (JUST RUN THE CODE)</p>
+<h1>In[16]:</h1>
+<p>X_train_cat.head()  # (JUST RUN THE CODE)</p>
+<h1>#### EDA before Preprocessing (JUST RUN THE CODE)</h1>
+<h1>---</h1>
+<h1>- Find the number of missing values</h1>
+<h1>In[17]:</h1>
+<p>100 * (X_train.isna().sum(0) / len(X_train))</p>
+<h1>- We will impute all these variables if there is any missing value</h1>
+<h1>- First, check the numerical features distribution</h1>
+<h1>In[18]:</h1>
+<p>import matplotlib.pyplot as plt
+import seaborn as sns
+get_ipython().run_line_magic('matplotlib', 'inline')</p>
+<h1>In[19]:</h1>
+<h1>Plot histogram</h1>
+<p>fig, ax = plt.subplots(nrows=3, ncols=2, figsize=(12, 8))
+axes = ax.flatten()</p>
+<p>for i, col in enumerate(X_train_num.columns):
+    sns.kdeplot(X_train_num[col], ax=axes[i])
+    axes[i].set_title(f'Distribution of {col}')</p>
+<p>plt.tight_layout()
+plt.show()</p>
+<h1>- All the distribution are skewed, we can impute a missing value by its features median.</h1>
+<h1>- Next, explore the <code>pickup_time</code></h1>
+<h1>In[20]:</h1>
+<p>X_train['pickup_time'].value_counts(normalize=True)</p>
+<h1>- There's a missing value with symbol <code>'-'</code> in <code>pickup_time</code>,</h1>
+<h1>- We can impute the missing value with <code>UNKNOWN</code></h1>
+<h1>- Explore the relation between <code>pickup_time</code> and <code>fare</code></h1>
+<h1>In[21]:</h1>
+<h1>Concat the data first</h1>
+<p>train_data = pd.concat((X_train, y_train), axis=1)
+train_data.head()</p>
+<h1>In[22]:</h1>
+<h1>Create a boxplot</h1>
+<p>sns.boxplot(data=train_data[train_data['fare_amount'] &lt; 50],
+            x='pickup_time',
+            y='fare_amount')
+plt.show()</p>
+<h1>- There is no significant fare different between <code>pickup_time</code>.</h1>
+<h1>- We can perform a one hot encoding for this data.</h1>
+<h1><strong>Conclusion for preprocessing</strong></h1>
+<h1>- Impute the missing <code>passenger_counts</code> with its median</h1>
+<h1>- Impute the missing <code>pickup_time</code> with <code>'UNKNOWN'</code></h1>
+<h1>- Feature engineering the <code>dropoff</code> and <code>pickup</code> coordinate to be a distance between pickup and dropoff. We can use an Euclidean distance for simplicity.</h1>
+<h1>#### 2.4. Numerical Imputation (6 pts)</h1>
+<h1>---</h1>
+<h1>- Now, let's perform a numerical imputation</h1>
+<h1>- First check the missing value of the numerical data</h1>
+<h1>In[23]:</h1>
+<h1>Check missing value (JUST RUN THE CODE)</h1>
+<p>X_train_num.isna().sum(0)</p>
+<h1>- Create a function to fit a numerical features imputer</h1>
+<h1>In[24]:</h1>
+<h6></h6>
+<h1>Create function to fit &amp; transform numerical imputers</h1>
+<h1>The fit function is called by num_imputer_fit</h1>
+<h1>- it needs 1 input, the data (pd.DataFrame)</h1>
+<h1>- the missing value is np.nan</h1>
+<h1>- the imputation strategy is median</h1>
+<h1>- it return the imputer</h1>
+<h1></h1>
+<h1>The transform function is called by num_imputer_transform</h1>
+<h1>- it needs 2 input, data (pd.DataFrame) and imputer (sklearn object)</h1>
+<h1>- it return the imputed data in pd.DataFrame format</h1>
+<h1></h1>
+<h1>Write your code here</h1>
+<h6></h6>
+<p>def num_imputer_fit(data):
+    """
+    Fit a numerical imputer.</p>
+<div class="highlight"><pre><span></span><code><span class="nx">Parameters</span><span class="p">:</span>
+<span class="o">-</span><span class="w"> </span><span class="nx">data</span><span class="w"> </span><span class="p">(</span><span class="nx">pd</span><span class="p">.</span><span class="nx">DataFrame</span><span class="p">):</span><span class="w"> </span><span class="nx">The</span><span class="w"> </span><span class="nx">input</span><span class="w"> </span><span class="nx">DataFrame</span><span class="w"> </span><span class="nx">containing</span><span class="w"> </span><span class="nx">numerical</span><span class="w"> </span><span class="nx">data</span><span class="p">.</span>
+
+<span class="nx">Returns</span><span class="p">:</span>
+<span class="o">-</span><span class="w"> </span><span class="nx">SimpleImputer</span><span class="p">:</span><span class="w"> </span><span class="nx">The</span><span class="w"> </span><span class="nx">fitted</span><span class="w"> </span><span class="nx">imputer</span><span class="p">.</span>
+<span class="s">&quot;&quot;</span><span class="err">&quot;</span>
+
+<span class="nx">fit_data</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">SimpleImputer</span><span class="p">(</span><span class="nx">strategy</span><span class="p">=</span><span class="err">&#39;</span><span class="nx">median</span><span class="err">&#39;</span><span class="p">).</span><span class="nx">fit</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span>
+
+<span class="k">return</span><span class="w"> </span><span class="nx">fit_data</span>
+</code></pre></div>
+
+<p>def num_imputer_transform(data, imputer):
+    """
+    Transform the numerical data using a fitted imputer.</p>
+<div class="highlight"><pre><span></span><code><span class="nx">Parameters</span><span class="p">:</span>
+<span class="o">-</span><span class="w"> </span><span class="nx">data</span><span class="w"> </span><span class="p">(</span><span class="nx">pd</span><span class="p">.</span><span class="nx">DataFrame</span><span class="p">):</span><span class="w"> </span><span class="nx">The</span><span class="w"> </span><span class="nx">input</span><span class="w"> </span><span class="nx">DataFrame</span><span class="w"> </span><span class="nx">containing</span><span class="w"> </span><span class="nx">numerical</span><span class="w"> </span><span class="nx">data</span><span class="p">.</span>
+<span class="o">-</span><span class="w"> </span><span class="nx">imputer</span><span class="w"> </span><span class="p">(</span><span class="nx">SimpleImputer</span><span class="p">):</span><span class="w"> </span><span class="nx">The</span><span class="w"> </span><span class="nx">fitted</span><span class="w"> </span><span class="nx">imputer</span><span class="p">.</span>
+
+<span class="nx">Returns</span><span class="p">:</span>
+<span class="o">-</span><span class="w"> </span><span class="nx">pd</span><span class="p">.</span><span class="nx">DataFrame</span><span class="p">:</span><span class="w"> </span><span class="nx">The</span><span class="w"> </span><span class="nx">DataFrame</span><span class="w"> </span><span class="nx">with</span><span class="w"> </span><span class="nx">imputed</span><span class="w"> </span><span class="nx">values</span><span class="p">.</span>
+<span class="s">&quot;&quot;</span><span class="err">&quot;</span>
+<span class="nx">transform_data</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">pd</span><span class="p">.</span><span class="nx">DataFrame</span><span class="p">(</span><span class="nx">imputer</span><span class="p">.</span><span class="nx">transform</span><span class="p">(</span><span class="nx">data</span><span class="p">),</span>
+<span class="w">                              </span><span class="nx">columns</span><span class="p">=</span><span class="nx">data</span><span class="p">.</span><span class="nx">columns</span><span class="p">,</span><span class="w"> </span><span class="nx">index</span><span class="p">=</span><span class="nx">data</span><span class="p">.</span><span class="nx">index</span><span class="p">)</span>
+
+<span class="k">return</span><span class="w"> </span><span class="nx">transform_data</span>
+</code></pre></div>
+
+<h1>- Perform imputation</h1>
+<h1>In[25]:</h1>
+<h1>Get the numerical imputer</h1>
+<p>num_imputer = num_imputer_fit(X_train_num) # WRITE YOUR CODE HERE</p>
+<h1>Transform the data</h1>
+<p>X_train_num_imputed = num_imputer_transform(X_train_num, num_imputer) # WRITE YOUR CODE HERE</p>
+<h1>In[26]:</h1>
+<h1>Validate (JUST RUN THE CODE)</h1>
+<p>X_train_num_imputed.isna().sum(0)</p>
+<h1>Great!</h1>
+<h1>#### 2.5. Categorical Imputation (6 pts)</h1>
+<h1>---</h1>
+<h1>- Next, let's perform the categorical imputation</h1>
+<h1>In[27]:</h1>
+<h1>Check missing value (JUST RUN THE CODE)</h1>
+<p>X_train_cat.value_counts(normalize=True)</p>
+<h1>- Create a function to fit a categorical features imputer</h1>
+<h1>In[28]:</h1>
+<h6></h6>
+<h1>Create function to fit &amp; transform categorical imputers</h1>
+<h1>The fit function is called by cat_imputer_fit</h1>
+<h1>- it needs 1 input, the data (pd.DataFrame)</h1>
+<h1>- the missing value is '-'</h1>
+<h1>- the imputation strategy is filling it with 'UNKNOWN'</h1>
+<h1>- it return the imputer</h1>
+<h1></h1>
+<h1>The transform function is called by cat_imputer_transform</h1>
+<h1>- it needs 2 input, data (pd.DataFrame) and imputer (sklearn object)</h1>
+<h1>- it return the imputed data in pd.DataFrame format</h1>
+<h1></h1>
+<h1>Write your code here</h1>
+<h6></h6>
+<p>def cat_imputer_fit(data):
+    """
+    Fits a SimpleImputer for categorical variables.</p>
+<div class="highlight"><pre><span></span><code><span class="n">Parameters</span><span class="p">:</span>
+<span class="o">-</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">):</span><span class="w"> </span><span class="n">Input</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="n">containing</span><span class="w"> </span><span class="n">categorical</span><span class="w"> </span><span class="n">variables</span>
+
+<span class="n">Returns</span><span class="p">:</span>
+<span class="o">-</span><span class="w"> </span><span class="n">SimpleImputer</span><span class="p">:</span><span class="w"> </span><span class="n">Fitted</span><span class="w"> </span><span class="n">imputer</span><span class="w"> </span><span class="n">object</span>
+<span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">fit_data = SimpleImputer(missing_values=&#39;-&#39;,</span>
+<span class="s2">                         strategy=&#39;constant&#39;,</span>
+<span class="s2">                         fill_value=&#39;UNKNOWN&#39;)</span>
+<span class="s2">fit_data.fit(data)</span>
+
+<span class="s2">return fit_data</span>
+</code></pre></div>
+
+<p>def cat_imputer_transform(data, imputer):
+    """
+    Transforms data using a fitted categorical imputer.</p>
+<div class="highlight"><pre><span></span><code><span class="nx">Parameters</span><span class="p">:</span>
+<span class="o">-</span><span class="w"> </span><span class="nx">data</span><span class="w"> </span><span class="p">(</span><span class="nx">pd</span><span class="p">.</span><span class="nx">DataFrame</span><span class="p">):</span><span class="w"> </span><span class="nx">Input</span><span class="w"> </span><span class="nx">data</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">transform</span>
+<span class="o">-</span><span class="w"> </span><span class="nx">imputer</span><span class="w"> </span><span class="p">(</span><span class="nx">SimpleImputer</span><span class="p">):</span><span class="w"> </span><span class="nx">Fitted</span><span class="w"> </span><span class="nx">imputer</span><span class="w"> </span><span class="nx">object</span>
+
+<span class="nx">Returns</span><span class="p">:</span>
+<span class="o">-</span><span class="w"> </span><span class="nx">pd</span><span class="p">.</span><span class="nx">DataFrame</span><span class="p">:</span><span class="w"> </span><span class="nx">Transformed</span><span class="w"> </span><span class="nx">data</span><span class="w"> </span><span class="nx">with</span><span class="w"> </span><span class="nx">imputed</span><span class="w"> </span><span class="nx">values</span>
+<span class="s">&quot;&quot;</span><span class="err">&quot;</span>
+<span class="nx">imputed_data</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">imputer</span><span class="p">.</span><span class="nx">transform</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span>
+<span class="nx">transform_data</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">pd</span><span class="p">.</span><span class="nx">DataFrame</span><span class="p">(</span><span class="nx">imputed_data</span><span class="p">,</span>
+<span class="w">                              </span><span class="nx">columns</span><span class="p">=</span><span class="nx">data</span><span class="p">.</span><span class="nx">columns</span><span class="p">,</span><span class="w"> </span>
+<span class="w">                              </span><span class="nx">index</span><span class="p">=</span><span class="nx">data</span><span class="p">.</span><span class="nx">index</span><span class="p">)</span>
+
+<span class="k">return</span><span class="w"> </span><span class="nx">transform_data</span>
+</code></pre></div>
+
+<h1>- Perform imputation</h1>
+<h1>In[29]:</h1>
+<h1>Perform categorical imputation</h1>
+<p>cat_imputer = cat_imputer_fit(X_train_cat) # WRITE YOUR CODE HERE</p>
+<h1>Transform</h1>
+<p>X_train_cat_imputed = cat_imputer_transform(X_train_cat, cat_imputer) # WRITE YOUR CODE HERE</p>
+<h1>In[30]:</h1>
+<h1>Validate (JUST RUN THE CODE)</h1>
+<p>X_train_cat_imputed.value_counts(normalize=True)</p>
+<h1>In[31]:</h1>
+<p>X_train_cat_imputed.head()</p>
+<h1>Great!</h1>
+<h1>#### 2.6. Preprocess Categorical Features (6 pts)</h1>
+<h1>---</h1>
+<h1>- We will create a one-hot-encoder (read the <code>EDA before processing</code>) for the categorical features</h1>
+<h1>- Create a function to perform a one hot encoder</h1>
+<h1>In[32]:</h1>
+<h6></h6>
+<h1>Write two functions to perform OHE for the categorical data</h1>
+<h1>The first function is called cat_encoder_fit</h1>
+<h1>- It needs 1 input, the data (pd.DataFrame)</h1>
+<h1>- You create an encoder (from OHE Sklearn)</h1>
+<h1>- input all categories of the categorical data</h1>
+<h1>- if there is other category outside the categories listed right now, ignore it</h1>
+<h1>- return the encoder</h1>
+<h1></h1>
+<h1>The second function is called cat_encoder_transfrom</h1>
+<h1>- It needs two input, the data (pd.DataFrame), the encoder (sklearn object)</h1>
+<h1>- It transform the input data based on the encoder</h1>
+<h1>- It returns the encoded data (pd.DataFrame)</h1>
+<h1></h1>
+<h1>Write your code here</h1>
+<h6></h6>
+<p>def cat_encoder_fit(data):
+    """
+    Fit a OneHotEncoder for categorical data.</p>
+<div class="highlight"><pre><span></span><code>Parameters:
+<span class="k">-</span> data (pd.DataFrame): The input DataFrame containing categorical data.
+
+Returns:
+<span class="k">-</span> OneHotEncoder: The fitted encoder.
+&quot;&quot;&quot;
+encoder = OneHotEncoder(sparse_output=False)
+fit_data = encoder.fit(data[[&#39;pickup_time&#39;]])
+
+return fit_data
+</code></pre></div>
+
+<p>def cat_encoder_transform(data, encode):
+    """
+    Transform the categorical data using a fitted encoder.</p>
+<div class="highlight"><pre><span></span><code>Parameters:
+<span class="k">-</span> data (pd.DataFrame): The input DataFrame containing categorical data.
+<span class="k">-</span> encode (OneHotEncoder): The fitted encoder.
+
+Returns:
+<span class="k">-</span> pd.DataFrame: The transformed data as a DataFrame.
+&quot;&quot;&quot;
+encoder = encode
+encoded = encoder.transform(data)
+transform_data = pd.DataFrame(encoded, columns=encoder.categories_[0])
+transform_data.index = data.index
+
+return transform_data
+</code></pre></div>
+
+<h1>- Perform imputation</h1>
+<h1>In[33]:</h1>
+<h1>Perform categorical imputation</h1>
+<p>cat_encoder = cat_encoder_fit(X_train_cat_imputed) # WRITE YOUR CODE HERE</p>
+<h1>Transform</h1>
+<p>X_train_cat_encoded = cat_encoder_transform(X_train_cat_imputed, cat_encoder) # WRITE YOUR CODE HERE</p>
+<h1>In[34]:</h1>
+<h1>Validate  (JUST RUN THE CODE)</h1>
+<p>print('Original shape:', X_train_cat_imputed.shape)
+print('Encoded shape :', X_train_cat_encoded.shape)</p>
+<h1>In[35]:</h1>
+<h1>Validate  (JUST RUN THE CODE)</h1>
+<p>X_train_cat_encoded.head()</p>
+<h1>In[36]:</h1>
+<h1>Validate  (JUST RUN THE CODE)</h1>
+<p>X_train_cat_imputed.head()</p>
+<h1>Great!</h1>
+<h1>#### 2.7. Join the data (6 pts)</h1>
+<h1>---</h1>
+<h1>- After all the data is filled (numerically), we can join the data</h1>
+<h1>- Create a function to join the data</h1>
+<h1>In[37]:</h1>
+<h6></h6>
+<h1>Create a function to join / concat the data</h1>
+<h1>The function is called by concat_data</h1>
+<h1>- It needs two input, num_data (pd.DataFrame) and cat_data (pd.DataFrame)</h1>
+<h1>- Don't forget to validate your process</h1>
+<h1>- It returns the concated data</h1>
+<h1></h1>
+<h1>Write your code here</h1>
+<h6></h6>
+<p>def concat_data(num_data, cat_data):
+    """
+    Concatenate numerical and categorical data.</p>
+<div class="highlight"><pre><span></span><code>Parameters:
+<span class="k">-</span> num_data (pd.DataFrame): DataFrame containing numerical data.
+<span class="k">-</span> cat_data (pd.DataFrame): DataFrame containing categorical data.
+
+Returns:
+<span class="k">-</span> pd.DataFrame: Concatenated DataFrame.
+&quot;&quot;&quot;
+concated_data = pd.concat([num_data, cat_data], axis=1)
+
+print(f&#39;Numerical data shape  : {num_data.shape}&#39;)
+print(f&#39;Categorical data shape: {cat_data.shape}&#39;)
+print(f&#39;Concat data shape     : {concated_data.shape}&#39;)
+
+return concated_data
+</code></pre></div>
+
+<h1>- Perform concatenated</h1>
+<h1>In[38]:</h1>
+<h1>Concat the data</h1>
+<p>X_train_concat = concat_data(X_train_num_imputed, X_train_cat_encoded) # WRITE YOUR CODE HERE</p>
+<h1>In[39]:</h1>
+<h1>Validate (JUST RUN THE CODE)</h1>
+<p>X_train_concat.head()</p>
+<h1>Great!</h1>
+<h1>#### 2.8. Feature engineering the data (8 pts)</h1>
+<h1>---</h1>
+<h1>- Now, <code>pickup</code> and <code>dropoff</code> coordinate is not an explicit features.</h1>
+<h1>- We can create a better feature called by <code>distance</code> to summarize the <code>pickup</code> and <code>dropoff</code> coordinate.</h1>
+<h1>In[40]:</h1>
+<h6></h6>
+<h1>Create a function that obtain the distance</h1>
+<h1>The function is called with map_distance</h1>
+<h1>- It needs an input, data (pd.DataFrame)</h1>
+<h1>- In the input, you calculate the trip distance using Euclidean Distance</h1>
+<h1>ref: https://www.cuemath.com/euclidean-distance-formula/</h1>
+<h1>- Then, you can save the distance information as a new column, 'distance'</h1>
+<h1>- And you can drop the pickup and dropoff latitude and longitude</h1>
+<h1>- You return the mapped data</h1>
+<h1></h1>
+<h1>Write your code here</h1>
+<h6></h6>
+<p>def map_distance(data):
+    """
+    Calculate the Euclidean distance between pickup and dropoff points
+    and add it as a new column. Drop latitude and longitude columns.</p>
+<div class="highlight"><pre><span></span><code>Parameters:
+<span class="k">-</span> data (pd.DataFrame): DataFrame containing latitude and longitude information. 
+            Must include columns: &#39;pickup_latitude&#39;, &#39;pickup_longitude&#39;, 
+            &#39;dropoff_latitude&#39;, &#39;dropoff_longitude&#39;.
+
+Returns:
+<span class="k">-</span> pd.DataFrame: DataFrame with a new column &#39;distance&#39; and without latitude/longitude columns.
+&quot;&quot;&quot;
+data[&#39;distance&#39;] = np.sqrt(
+    (data[&#39;dropoff_latitude&#39;] - data[&#39;pickup_latitude&#39;])**2 +
+    (data[&#39;dropoff_longitude&#39;] - data[&#39;pickup_longitude&#39;])**2
+)
+
+data.drop(columns=[&#39;dropoff_latitude&#39;,&#39;pickup_latitude&#39;,&#39;dropoff_longitude&#39;,&#39;pickup_longitude&#39;], inplace=True)
+
+return data
+</code></pre></div>
+
+<h1>- Perform distance calculation (4 pts)</h1>
+<h1>In[41]:</h1>
+<h1>Calculate the distance</h1>
+<p>X_train_concat_fe = map_distance(X_train_concat) # WRITE YOUR CODE HERE</p>
+<h1>In[42]:</h1>
+<h1>Validate (JUST RUN THE CODE)</h1>
+<p>X_train_concat_fe.head()</p>
+<h1>- And finally, we standardize the data so that it can perform well during model optimization (4 pts)</h1>
+<h1>In[43]:</h1>
+<h6></h6>
+<h1>Create two functions to perform scaling &amp; transform scaling</h1>
+<h1>The scaling is Standardization</h1>
+<h1>The first function is to fit the scaler, called by fit_scaler</h1>
+<h1>- You need an input, a data (pd.Dataframe)</h1>
+<h1>- You create a standardization scaler (please use sklearn)</h1>
+<h1>- Your output is the scaler</h1>
+<h1></h1>
+<h1>The second function is to transform data using scaler, called by transform_scaler</h1>
+<h1>- There are two inputs, a data (pd.Dataframe), a scaler (sklearn object)</h1>
+<h1>- You scaled the data, then return the scaled data</h1>
+<h1>Write your code here</h1>
+<h6></h6>
+<p>def fit_scaler(data):
+    """
+    Fit a StandardScaler to the given data.</p>
+<div class="highlight"><pre><span></span><code>Parameters:
+<span class="k">-</span> data (pd.DataFrame): The input data to fit the scaler.
+
+Returns:
+<span class="k">-</span> StandardScaler: The fitted scaler.
+&quot;&quot;&quot;
+fit_data = StandardScaler().fit(data)
+
+return fit_data
+</code></pre></div>
+
+<p>def transform_scaler(data, scaled):
+    """
+    Transform the given data using the fitted scaler.</p>
+<div class="highlight"><pre><span></span><code>Parameters:
+<span class="k">-</span> data (pd.DataFrame): The input data to be transformed.
+<span class="k">-</span> scaled (StandardScaler): The fitted scaler.
+
+Returns:
+<span class="k">-</span> pd.DataFrame: Scaled data in the same format as the input DataFrame.
+&quot;&quot;&quot;
+transformed_data = scaled.transform(data)
+transform_data = pd.DataFrame(transformed_data, columns=data.columns, index=data.index)
+
+return transform_data
+</code></pre></div>
+
+<h1>In[44]:</h1>
+<h1>Fit the scaler</h1>
+<p>scaler = fit_scaler(X_train_concat_fe) # WRITE YOUR CODE HERE</p>
+<h1>Transform the scaler</h1>
+<p>X_train_clean = transform_scaler(X_train_concat_fe, scaler) # WRITE YOUR CODE HERE</p>
+<h1>In[45]:</h1>
+<h1>Validate (JUST RUN THE CODE)</h1>
+<p>X_train_clean.describe().round(4)</p>
+<h1>Great!</h1>
+<h1>#### 2.9. Create the preprocess function (10 pts)</h1>
+<h1>---</h1>
+<h1>- Now, let's create a function to preprocess other set of data (valid &amp; test) so that we can predict that</h1>
+<h1>In[46]:</h1>
+<h6></h6>
+<h1>Create a function to preprocess the dataset</h1>
+<h1>You called the function preprocess_data</h1>
+<h1>- It needs many input</h1>
+<h1>- data, pd.DataFrame</h1>
+<h1>- num_cols, the numerical columns, list</h1>
+<h1>- cat_cols, the categorical columns, list</h1>
+<h1>- num_imputer, the numerical imputer, sklearn object</h1>
+<h1>- cat_imputer, the categorical imputer, sklearn object</h1>
+<h1>- cat_encoder, the categorical encoder, sklearn object</h1>
+<h1>- scaler, the data scaler, sklearn object</h1>
+<h1>- You preprocess the data following step 2.3 - 2.8</h1>
+<h1>- You return the clean data</h1>
+<h1></h1>
+<h1>Write your code here</h1>
+<h6></h6>
+<p>def preprocess_data(data, num_cols, cat_cols, num_imputer, cat_imputer, cat_encoder, scaler):
+    """
+    Preprocess the dataset by imputing missing values, encoding categorical variables, and scaling numerical variables.</p>
+<div class="highlight"><pre><span></span><code><span class="k">Parameters</span><span class="err">:</span>
+<span class="o">-</span><span class="w"> </span><span class="k">data</span><span class="err">:</span><span class="w"> </span><span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">,</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">input</span><span class="w"> </span><span class="k">data</span><span class="p">.</span>
+<span class="o">-</span><span class="w"> </span><span class="nl">num_cols</span><span class="p">:</span><span class="w"> </span><span class="n">list</span><span class="p">,</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">numerical</span><span class="w"> </span><span class="n">columns</span><span class="p">.</span>
+<span class="o">-</span><span class="w"> </span><span class="nl">cat_cols</span><span class="p">:</span><span class="w"> </span><span class="n">list</span><span class="p">,</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">categorical</span><span class="w"> </span><span class="n">columns</span><span class="p">.</span>
+<span class="o">-</span><span class="w"> </span><span class="nl">num_imputer</span><span class="p">:</span><span class="w"> </span><span class="n">sklearn</span><span class="w"> </span><span class="k">object</span><span class="p">,</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">numerical</span><span class="w"> </span><span class="n">imputer</span><span class="p">.</span>
+<span class="o">-</span><span class="w"> </span><span class="nl">cat_imputer</span><span class="p">:</span><span class="w"> </span><span class="n">sklearn</span><span class="w"> </span><span class="k">object</span><span class="p">,</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">categorical</span><span class="w"> </span><span class="n">imputer</span><span class="p">.</span>
+<span class="o">-</span><span class="w"> </span><span class="nl">cat_encoder</span><span class="p">:</span><span class="w"> </span><span class="n">sklearn</span><span class="w"> </span><span class="k">object</span><span class="p">,</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">categorical</span><span class="w"> </span><span class="n">encoder</span><span class="p">.</span>
+<span class="o">-</span><span class="w"> </span><span class="nl">scaler</span><span class="p">:</span><span class="w"> </span><span class="n">sklearn</span><span class="w"> </span><span class="k">object</span><span class="p">,</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">data</span><span class="w"> </span><span class="n">scaler</span><span class="p">.</span>
+
+<span class="k">Returns</span><span class="err">:</span>
+<span class="o">-</span><span class="w"> </span><span class="nl">clean_data</span><span class="p">:</span><span class="w"> </span><span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">,</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">preprocessed</span><span class="w"> </span><span class="k">data</span><span class="p">.</span>
+<span class="ss">&quot;&quot;&quot;</span>
+<span class="ss"># Validate that the input columns exist in the DataFrame</span>
+<span class="ss">for col in num_cols + cat_cols:</span>
+<span class="ss">    if col not in data.columns:</span>
+<span class="ss">        raise ValueError(f&quot;</span><span class="k">Column</span><span class="w"> </span><span class="s1">&#39;{col}&#39;</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="k">found</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">input</span><span class="w"> </span><span class="n">DataFrame</span><span class="p">.</span><span class="ss">&quot;)</span>
+
+<span class="ss"># Validate that there is no overlap between numerical and categorical columns</span>
+<span class="ss">overlap = set(num_cols).intersection(set(cat_cols))</span>
+<span class="ss">if overlap:</span>
+<span class="ss">    raise ValueError(f&quot;</span><span class="n">Columns</span><span class="w"> </span><span class="err">{</span><span class="n">overlap</span><span class="err">}</span><span class="w"> </span><span class="k">are</span><span class="w"> </span><span class="n">present</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="k">both</span><span class="w"> </span><span class="n">numerical</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">categorical</span><span class="w"> </span><span class="n">lists</span><span class="p">.</span><span class="err">&quot;</span><span class="p">)</span>
+
+<span class="err">#</span><span class="w"> </span><span class="n">Split</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">data</span><span class="w"> </span><span class="k">into</span><span class="w"> </span><span class="n">numerical</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">categorical</span><span class="w"> </span><span class="n">DataFrames</span>
+<span class="n">X_train_num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">data</span><span class="o">[</span><span class="n">num_cols</span><span class="o">]</span>
+<span class="n">X_train_cat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">data</span><span class="o">[</span><span class="n">cat_cols</span><span class="o">]</span>
+
+<span class="err">#</span><span class="w"> </span><span class="n">Fit</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">numerical</span><span class="w"> </span><span class="n">features</span><span class="w"> </span><span class="n">imputer</span>
+<span class="n">num_imputed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">num_imputer</span><span class="p">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_train_num</span><span class="p">),</span>
+<span class="w">                              </span><span class="n">columns</span><span class="o">=</span><span class="n">X_train_num</span><span class="p">.</span><span class="n">columns</span><span class="p">,</span><span class="w"> </span><span class="k">index</span><span class="o">=</span><span class="n">X_train_num</span><span class="p">.</span><span class="k">index</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;Numerical data shape  : {num_imputed.shape}&#39;</span><span class="p">)</span>
+
+<span class="err">#</span><span class="w">  </span><span class="n">Fit</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">categorical</span><span class="w"> </span><span class="n">features</span><span class="w"> </span><span class="n">imputer</span>
+<span class="n">cat_imputed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">cat_imputer</span><span class="p">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_train_cat</span><span class="p">),</span>
+<span class="w">                              </span><span class="n">columns</span><span class="o">=</span><span class="n">X_train_cat</span><span class="p">.</span><span class="n">columns</span><span class="p">,</span><span class="w"> </span>
+<span class="w">                              </span><span class="k">index</span><span class="o">=</span><span class="n">X_train_cat</span><span class="p">.</span><span class="k">index</span><span class="p">)</span>
+
+<span class="err">#</span><span class="w"> </span><span class="k">Create</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">one</span><span class="o">-</span><span class="n">hot</span><span class="o">-</span><span class="n">encoder</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">categorical</span><span class="w"> </span><span class="n">features</span>
+<span class="n">cat_encoded</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">cat_encoder</span><span class="p">.</span><span class="n">transform</span><span class="p">(</span><span class="n">cat_imputed</span><span class="p">),</span><span class="w"> </span><span class="n">columns</span><span class="o">=</span><span class="n">cat_encoder</span><span class="p">.</span><span class="n">categories_</span><span class="o">[</span><span class="n">0</span><span class="o">]</span><span class="p">)</span>
+<span class="n">cat_encoded</span><span class="p">.</span><span class="k">index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cat_imputed</span><span class="p">.</span><span class="k">index</span><span class="w"> </span>
+<span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;Categorical data shape: {cat_encoded.shape}&#39;</span><span class="p">)</span>
+
+<span class="err">#</span><span class="w"> </span><span class="k">Join</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nf">concat</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">data</span>
+<span class="n">concated_data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pd</span><span class="p">.</span><span class="nf">concat</span><span class="p">(</span><span class="o">[</span><span class="n">num_imputed, cat_encoded</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;Concat data shape     : {concated_data.shape}\n&#39;</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;Original data shape: {concated_data.shape}&#39;</span><span class="p">)</span>
+
+<span class="err">#</span><span class="w"> </span><span class="k">Create</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">better</span><span class="w"> </span><span class="n">feature</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">summarize</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">pickup</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">dropoff</span><span class="w"> </span><span class="n">coordinate</span><span class="p">.</span>
+<span class="n">concated_data</span><span class="o">[</span><span class="n">&#39;distance&#39;</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">np</span><span class="p">.</span><span class="nf">sqrt</span><span class="p">(</span>
+<span class="w">    </span><span class="p">(</span><span class="n">concated_data</span><span class="o">[</span><span class="n">&#39;dropoff_latitude&#39;</span><span class="o">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">concated_data</span><span class="o">[</span><span class="n">&#39;pickup_latitude&#39;</span><span class="o">]</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="w"> </span><span class="o">+</span>
+<span class="w">    </span><span class="p">(</span><span class="n">concated_data</span><span class="o">[</span><span class="n">&#39;dropoff_longitude&#39;</span><span class="o">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">concated_data</span><span class="o">[</span><span class="n">&#39;pickup_longitude&#39;</span><span class="o">]</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
+<span class="p">)</span>
+
+<span class="n">concated_data</span><span class="p">.</span><span class="k">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=[</span><span class="n">&#39;dropoff_latitude&#39;,&#39;pickup_latitude&#39;,&#39;dropoff_longitude&#39;,&#39;pickup_longitude&#39;</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="n">inplace</span><span class="o">=</span><span class="k">True</span><span class="p">)</span>
+
+<span class="err">#</span><span class="w"> </span><span class="n">Standardize</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">data</span><span class="w"> </span><span class="n">so</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="n">can</span><span class="w"> </span><span class="n">perform</span><span class="w"> </span><span class="n">well</span><span class="w"> </span><span class="n">during</span><span class="w"> </span><span class="n">model</span><span class="w"> </span><span class="n">optimization</span>
+<span class="n">clean_data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">scaler</span><span class="p">.</span><span class="n">transform</span><span class="p">(</span><span class="n">concated_data</span><span class="p">),</span><span class="w"> </span><span class="n">columns</span><span class="o">=</span><span class="n">concated_data</span><span class="p">.</span><span class="n">columns</span><span class="p">,</span><span class="w"> </span><span class="k">index</span><span class="o">=</span><span class="n">concated_data</span><span class="p">.</span><span class="k">index</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;Mapped data shape  : {clean_data.shape}\n&#39;</span><span class="p">)</span>
+
+<span class="k">return</span><span class="w"> </span><span class="n">clean_data</span>
+</code></pre></div>
+
+<p>num_cols = ['pickup_longitude','pickup_latitude','dropoff_longitude','dropoff_latitude','passenger_count']
+cat_cols = ['pickup_time']</p>
+<h1>In[47]:</h1>
+<h1>Preprocess the data training again</h1>
+<p>X_train_clean = preprocess_data(data=X_train,
+                                num_cols=num_cols, 
+                                cat_cols=cat_cols, 
+                                num_imputer=num_imputer, 
+                                cat_imputer=cat_imputer, 
+                                cat_encoder=cat_encoder, 
+                                scaler=scaler) # WRITE YOUR CODE HERE </p>
+<h1>In[48]:</h1>
+<h1>Validate (JUST RUN THE CODE)</h1>
+<p>print('Original data shape:', X_train.shape)
+print('Cleaned data shape :', X_train_clean.shape)
+X_train_clean.head()</p>
+<h1>In[49]:</h1>
+<h1>Transform other set of data</h1>
+<p>X_valid_clean = preprocess_data(data=X_valid,
+                                num_cols=num_cols, 
+                                cat_cols=cat_cols, 
+                                num_imputer=num_imputer, 
+                                cat_imputer=cat_imputer, 
+                                cat_encoder=cat_encoder, 
+                                scaler=scaler)# WRITE YOUR CODE HERE
+X_test_clean = preprocess_data(data=X_test,
+                                num_cols=num_cols, 
+                                cat_cols=cat_cols, 
+                                num_imputer=num_imputer, 
+                                cat_imputer=cat_imputer, 
+                                cat_encoder=cat_encoder, 
+                                scaler=scaler)# WRITE YOUR CODE HERE</p>
+<h1>### 3. Training Machine Learning Models (40 pts)</h1>
+<h1>---</h1>
+<h1>```</h1>
+<h1>3.1 Prepare train &amp; evaluate model function</h1>
+<h1>3.2 Train &amp; evaluate several models</h1>
+<h1>3.3 Choose the best model</h1>
+<h1>```</h1>
+<h1>#### 3.1. Preprare train &amp; evaluate model function (10 pts)</h1>
+<h1>---</h1>
+<h1>- Before modeling, let's prepare function to train &amp; evaluate model</h1>
+<h1>In[50]:</h1>
+<h6></h6>
+<h1>First, create a function to train model called train_model</h1>
+<h1>- It needs 3 input</h1>
+<h1>- estimator, the model (sklearn model)</h1>
+<h1>- X_train, the input (pd.DataFrame)</h1>
+<h1>- y_train, the output (pd.DataFrame)</h1>
+<h1>- You only fit the estimator using the X_train &amp; y_train</h1>
+<h1>- Then return nothing</h1>
+<h1></h1>
+<h1>Next, create a function to evaluate model called evaluate_model</h1>
+<h1>- It needs 5 input</h1>
+<h1>- estimator, the model (sklearn model)</h1>
+<h1>- X_train, the train input (pd.DataFrame)</h1>
+<h1>- y_train, the train output (pd.DataFrame)</h1>
+<h1>- X_valid, the valid input (pd.DataFrame)</h1>
+<h1>- y_valid, the valid output (pd.DataFrame)</h1>
+<h1>- You calculate the model performance using root mean squared error metrics</h1>
+<h1>- Then return two output, rmse_train and rmse_valid</h1>
+<h1></h1>
+<h1>Write your code here</h1>
+<h6></h6>
+<p>def train_model(estimator, X_train, y_train):
+    """
+    Train the model on the training data.</p>
+<div class="highlight"><pre><span></span><code>Parameters:
+<span class="k">-</span> model: sklearn model, the model to be trained.
+<span class="k">-</span> X_train: pd.DataFrame, the training input data.
+<span class="k">-</span> y_train: pd.Series, the training target data.
+&quot;&quot;&quot;
+estimator.fit(X_train, y_train)
+</code></pre></div>
+
+<p>def evaluate_model(estimator, X_train, y_train, X_valid, y_valid):
+    """
+    Evaluate the model on the training and test data.</p>
+<div class="highlight"><pre><span></span><code>Parameters:
+<span class="k">-</span> model: sklearn model, the trained model.
+<span class="k">-</span> X_train: pd.DataFrame, the training input data.
+<span class="k">-</span> y_train: pd.Series, the training target data.
+<span class="k">-</span> X_test: pd.DataFrame, the test input data.
+<span class="k">-</span> y_test: pd.Series, the test target data.
+
+Returns:
+<span class="k">-</span> rmse_train: float, the RMSE on the training data.
+<span class="k">-</span> rmse_test: float, the RMSE on the test data.
+&quot;&quot;&quot;
+<span class="gh">#</span> Make predictions
+y_train_pred = estimator.predict(X_train)
+y_valid_pred = estimator.predict(X_valid)
+
+<span class="gh">#</span> Calculate RMSE for training data
+rmse_train = np.sqrt(mean_squared_error(y_train, y_train_pred))
+
+<span class="gh">#</span> Calculate RMSE for validation data
+rmse_valid = np.sqrt(mean_squared_error(y_valid, y_valid_pred))
+
+return rmse_train, rmse_valid
+</code></pre></div>
+
+<h1>#### 3.2. Train and Evaluate Several Models (10 pts)</h1>
+<h1>---</h1>
+<h1>- Now, let's train &amp; evaluate several models</h1>
+<h1>- You should check, which one of the following model is the best model</h1>
+<h1></h1>
+<h1>1. Baseline model</h1>
+<h1>2. k-NN with k=1</h1>
+<h1>3. k-NN with k=100</h1>
+<h1>4. k-NN with k=200</h1>
+<h1>5. k-NN with k=500</h1>
+<h1>6. k-NN with k=len(data)</h1>
+<h1>In[52]:</h1>
+<h6></h6>
+<h1>Create your model here (no need to create function)</h1>
+<h1>Write your code here</h1>
+<h6></h6>
+<p>reg_1 = DummyRegressor(strategy='mean')               # Write your code here, follow the description
+reg_2 = KNeighborsRegressor(n_neighbors=1)            # Write your code here, follow the description
+reg_3 = KNeighborsRegressor(n_neighbors=100)          # Write your code here, follow the description
+reg_4 = KNeighborsRegressor(n_neighbors=200)          # Write your code here, follow the description
+reg_5 = KNeighborsRegressor(n_neighbors=500)          # Write your code here, follow the description
+reg_6 = KNeighborsRegressor(n_neighbors=len(X_test_clean))         # Write your code here, follow the description</p>
+<h1>In[53]:</h1>
+<h1>Train the model (JUST RUN THE CODE)</h1>
+<p>train_model(reg_1, X_train_clean, y_train)
+train_model(reg_2, X_train_clean, y_train)
+train_model(reg_3, X_train_clean, y_train)
+train_model(reg_4, X_train_clean, y_train)
+train_model(reg_5, X_train_clean, y_train)
+train_model(reg_6, X_train_clean, y_train)</p>
+<h1>In[1]:</h1>
+<h1>Return validation (JUST RUN THE CODE)</h1>
+<p>import time</p>
+<p>for reg in [reg_1, reg_2, reg_3, reg_4, reg_5, reg_6]:
+    t0 = time.time()</p>
+<div class="highlight"><pre><span></span><code><span class="p">#</span><span class="w"> </span><span class="n">Generate</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">rmse</span>
+<span class="n">rmse_train</span><span class="p">,</span><span class="w"> </span><span class="n">rmse_valid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">evaluate_model</span><span class="p">(</span><span class="n">estimator</span><span class="o">=</span><span class="kt">reg</span><span class="p">,</span>
+<span class="w">                                        </span><span class="n">X_train</span><span class="o">=</span><span class="n">X_train_clean</span><span class="p">,</span>
+<span class="w">                                        </span><span class="n">y_train</span><span class="o">=</span><span class="n">y_train</span><span class="p">,</span>
+<span class="w">                                        </span><span class="n">X_valid</span><span class="o">=</span><span class="n">X_valid_clean</span><span class="p">,</span>
+<span class="w">                                        </span><span class="n">y_valid</span><span class="o">=</span><span class="n">y_valid</span><span class="p">)</span>
+
+<span class="p">#</span><span class="w"> </span><span class="n">Logging</span>
+<span class="n">elapsed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">time</span><span class="p">.</span><span class="kt">time</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">t0</span>
+<span class="n">print</span><span class="p">(</span><span class="n">f</span><span class="p">&#39;</span><span class="n">model</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="n">str</span><span class="p">(</span><span class="kt">reg</span><span class="p">)</span><span class="o">:</span><span class="mh">40</span><span class="n">s</span><span class="p">}</span><span class="w"> </span><span class="p">&#39;</span>
+<span class="w">      </span><span class="n">f</span><span class="p">&#39;</span><span class="o">|</span><span class="w"> </span><span class="n">RMSE</span><span class="w"> </span><span class="nl">train:</span><span class="w"> </span><span class="p">{</span><span class="nl">rmse_train:</span><span class="mf">.4f</span><span class="p">}</span><span class="w"> </span><span class="p">&#39;</span>
+<span class="w">      </span><span class="n">f</span><span class="p">&#39;</span><span class="o">|</span><span class="w"> </span><span class="n">RMSE</span><span class="w"> </span><span class="nl">valid:</span><span class="w"> </span><span class="p">{</span><span class="nl">rmse_valid:</span><span class="mf">.4f</span><span class="p">}</span><span class="w"> </span><span class="p">&#39;</span>
+<span class="w">      </span><span class="n">f</span><span class="p">&#39;</span><span class="o">|</span><span class="w"> </span><span class="n">Time</span><span class="w"> </span><span class="nl">elapsed:</span><span class="w"> </span><span class="p">{</span><span class="n">elapsed</span><span class="o">*</span><span class="mh">1000</span><span class="o">:</span><span class="mf">.2f</span><span class="p">}</span><span class="w"> </span><span class="n">ms</span><span class="p">&#39;)</span>
+</code></pre></div>
+
+<h1>#### 3.3. Choose the best model (20 pts)</h1>
+<h1>---</h1>
+<h1>From the previous results, which one is the best model? (10 pts)</h1>
+<h1>```</h1>
+<h1>model : KNeighborsRegressor(n_neighbors=100)     | RMSE train: 3.9594 | RMSE valid: 3.9783 | Time elapsed: 78513.55 ms</h1>
+<h1>```</h1>
+<h1>Why do you choose that model? (10 pts)</h1>
+<h1>```</h1>
+<h1>Because this model has a good balance between training and validation RMSE, with a relatively low RMSE on both datasets.</h1>
+<h1>- Lowest validation RMSE</h1>
+<h1>- Very small gap between train and valid RMSE</h1>
+<h1>```</h1>
+<h1>And, create a <code>reg_best</code> to store the best model</h1>
+<h1>In[ ]:</h1>
+<h1>Write your code here</h1>
+<p>reg_best = KNeighborsRegressor(n_neighbors=100) 
+reg_best.fit(X_train_clean, y_train) # Write your code here</p>
+<h1>### 4. Predictions &amp; Evaluations (JUST RUN THE CODE)</h1>
+<h1>---</h1>
+<h1>```</h1>
+<h1>4.1 Predict &amp; Evaluate on the Train Data</h1>
+<h1>4.2 Predict &amp; Evaluate on the Test Data</h1>
+<h1>```</h1>
+<h1>#### 4.1. Predict &amp; evaluate on train data</h1>
+<h1>---</h1>
+<h1>In[ ]:</h1>
+<h1>Predict (JUST RUN THE CODE)</h1>
+<p>y_train_pred = reg_best.predict(X_train_clean)</p>
+<h1>In[ ]:</h1>
+<h1>Visualize &amp; compare the prediction (JUST RUN THE CODE)</h1>
+<p>plt.scatter(y_train, y_train_pred)</p>
+<p>plt.plot([0, 200], [0, 200], c='red')
+plt.xlim(0, 200); plt.ylim(0, 200)
+plt.xlabel('y actual'); plt.ylabel('y predicted')
+plt.title('Comparison of y actual vs y predicted on Train Data')
+plt.show()</p>
+<h1>#### 4.2. Predict &amp; evaluate on test data</h1>
+<h1>---</h1>
+<h1>In[ ]:</h1>
+<h1>Predict (JUST RUN THE CODE)</h1>
+<p>y_test_pred = reg_best.predict(X_test_clean)</p>
+<h1>In[ ]:</h1>
+<h1>Visualize &amp; compare the prediction (JUST RUN THE CODE)</h1>
+<p>plt.scatter(y_test, y_test_pred)</p>
+<p>plt.plot([0, 200], [0, 200], c='red')
+plt.xlim(0, 200); plt.ylim(0, 200)
+plt.xlabel('y actual'); plt.ylabel('y predicted')
+plt.title('Comparison of y actual vs y predicted on Test Data')
+plt.show()</p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="http://localhost:8000/tag/machine-learning.html">machine learning</a>
+      <a href="http://localhost:8000/tag/jupyterlab.html">jupyterlab</a>
+      <a href="http://localhost:8000/tag/data-science.html">data science</a>
+    </p>
+  </div>
+
+
+
+
+
+
+</article>
+
+<footer>
+<p>
+  &copy; 2024 0xp_ - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/deed.en_US" target="_blank">Creative Commons Attribution-ShareAlike</a>
+</p>
+<p>
+Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
+</p><p>
+  <a rel="license"
+     href="http://creativecommons.org/licenses/by-sa/4.0/"
+     target="_blank">
+    <img alt="Creative Commons License"
+         title="Creative Commons License"
+         style="border-width:0"
+           src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
+         width="80"
+         height="15"/>
+  </a>
+</p></footer>  </main>
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " beo_hijau | Welcome ",
+  "url" : "http://localhost:8000",
+  "image": "/images/profile.png",
+  "description": ""
+}
+</script>
+</body>
+</html>
