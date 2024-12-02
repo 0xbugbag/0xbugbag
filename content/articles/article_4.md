@@ -8,6 +8,10 @@ Tags: machine learning, jupyterlab, data science
 Authors: 0xbugbag
 Status: published
 
+Syntax highlighting
+
+```python
+
 #!/usr/bin/env python
 # coding: utf-8
 
@@ -1254,3 +1258,4 @@ plt.xlim(0, 200); plt.ylim(0, 200)
 plt.xlabel('y actual'); plt.ylabel('y predicted')
 plt.title('Comparison of y actual vs y predicted on Test Data')
 plt.show()
+```
