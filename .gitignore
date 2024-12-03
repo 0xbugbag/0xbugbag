@@ -32,3 +32,10 @@ Thumbs.db
 
 # Hidden Pelican files
 .cache/
+
+*~
+._*
+*.lock
+*.swp
+*.out
+*.py[cod]
