@@ -311,3 +311,95 @@ ul li {
 .about-color {
   background-color: #a4baffff; /* #663ce4ff  #343a40*/
 }
+
+/* RUNNING TEXT */
+/* Reset default margin */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Container for the running text */
+.running-text-container {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  background: linear-gradient(90deg, #2196F3, #3F51B5);
+  padding: 5px 0;
+}
+
+/* Wrapper for animation */
+.running-text-wrapper {
+  display: inline-block;
+  animation: runningText 10s linear infinite;
+}
+
+/* Individual text styling */
+.running-text {
+  display: inline-block;
+  padding-right: 50px;
+  color: white;
+  font-size: 16px;
+}
+
+/* Fade effects on edges */
+.running-text-container::before,
+.running-text-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 50px;
+  height: 100%;
+  z-index: 2;
+}
+
+.running-text-container::before {
+  left: 0;
+  background: linear-gradient(to right,
+                              rgba(33, 150, 243, 1) 0%,
+                              rgba(33, 150, 243, 0) 100%
+  );
+}
+
+.running-text-container::after {
+  right: 0;
+  background: linear-gradient(to left,
+                              rgba(63, 81, 181, 1) 0%,
+                              rgba(63, 81, 181, 0) 100%
+  );
+}
+
+/* Animation keyframes */
+@keyframes runningText {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Hover effect */
+.running-text-container:hover .running-text-wrapper {
+  animation-play-state: paused;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .running-text-container::before,
+  .running-text-container::after {
+    width: 30px;
+  }
+
+  .running-text {
+    font-size: 14px;
+  }
+}
+
+/* Optional: Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .running-text-container {
+    background: #283593;
+  }
+}
