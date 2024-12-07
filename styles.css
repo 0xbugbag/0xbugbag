@@ -1,0 +1,313 @@
+/* Color variables */
+:root {
+  --white-color: #fff;
+  --bg-color: #f4f5ffff;
+  --gray-color: #ccc;
+  --primary-color: #077cffff; /* Main blue 676767ff*/
+  --accent-color: #ff5722; /* Accent orange */
+  --secondary-color: #2f2f2fff; /* Light gray */
+  --text-color: #333; /* Dark gray */
+  --hover-color: #005f99; /* Darker blue for hover effects */
+}
+
+/* Changing background color */
+body {
+  background: var(--bg-color) !important;
+}
+
+.navbar-brand {
+  font-family: 'Roboto', sans-serif; /* Use the Google Font */
+  color: #077cffff !important;
+  /*text-shadow: 1px 1px 0px white, -1px 1px 0px white, 1px -1px 0px white, -1px -1px 0px white;
+  border-radius: 5px;*/
+}
+
+.navbar-brand-1 {
+  color: #ff5733 !important;
+  /*text-shadow: 1px 1px 0px white, -1px 1px 0px white, 1px -1px 0px white, -1px -1px 0px white;
+   * border-radius: 5px;*/
+}
+
+/* Changing link color */
+.nav-item .nav-link {
+  color: var(--white-color);
+}
+
+/* Hero section background image */
+.hero {
+  height: 100vh;
+  background-image: url("images/home-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-attachment: fixed;
+}
+
+#skills i {
+  height: 100px;
+  width: 100px;
+}
+
+#portfolio img {
+  height: 300px;
+  object-fit: cover;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.social-icons a {
+  width: 40px;
+  height: 40px;
+}
+
+footer .social-icons a {
+  width: 30px;
+  height: 30px;
+}
+
+#cv img {
+  width: 230px;
+}
+
+/* Contact section background image */
+#contact {
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-image: url("images/contact-bg.jpeg");
+}
+
+@media screen and (max-width: 990px) {
+  #skills .card {
+    width: calc(100% / 2 - 10px) !important;
+  }
+}
+
+@media screen and (max-width: 668px) {
+  #skills .card,
+  #portfolio .card-wrapper {
+    width: 100% !important;
+  }
+}
+
+#statusMessage {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.status.success {
+    background-color: #dff0d8;
+    color: #3c763d;
+}
+
+.status.error {
+    background-color: #f2dede;
+    color: #a94442;
+}
+
+.status.pending {
+    background-color: #fcf8e3;
+    color: #8a6d3b;
+}
+
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  text-decoration: none;
+  margin-right: 10px; /* Add spacing between icons */
+}
+
+.social-icon:last-child {
+  margin-right: 0; /* Remove margin for the last icon */
+}
+
+.social-icon i {
+  color: white;
+  font-size: 20px;
+}
+
+.social-icon:nth-child(1) {
+  background-color: #4ca5e6ff; /* LinkedIn */
+}
+
+.social-icon:nth-child(2) {
+  background-color: #4ca5e6ff; /* Twitter (X) */
+}
+
+.social-icon:nth-child(3) {
+  background-color: #4ca5e6ff; /* GitHub */
+}
+
+.about-section {
+  background-color: #303030ff; /* Replace with your desired color (e.g., blue) */
+  color: white; /* Ensure text contrast against the background */
+  padding: 5rem 0; /* Adjust spacing as needed */
+  width: 100%; /* Ensures the section spans the full width */
+  margin: 0; /* Removes default margins */
+}
+
+/* Timeline Container */
+.timeline {
+  position: relative;
+  margin: 0 auto;
+  max-width: 800px;
+  padding-left: 40px;
+  border-left: 2px solid #495057; /* Darker line to match the background */
+}
+
+/* Timeline Item */
+.timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+/* Timeline Icon */
+.timeline-icon {
+  position: absolute;
+  left: -28px;
+  top: 0;
+  width: 50px;
+  height: 50px;
+  background-color: #ffc107; /* Warning color for icons */
+  border: 3px solid #495057; /* Dark border */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: #343a40; /* Matches the section background */
+}
+
+/* Timeline Content */
+.timeline-content {
+  background-color: rgba(52, 58, 64, 0.9); /* Slightly transparent background for text blocks */
+  border-radius: 10px;
+  padding: 20px;
+  color: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Content Headers */
+.timeline-content h5 {
+  margin: 0 0 10px;
+}
+
+.timeline-content p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Responsive Timeline */
+@media (max-width: 768px) {
+  .timeline {
+    padding-left: 20px;
+  }
+
+  .timeline-icon {
+    left: -20px;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+
+  .timeline-content {
+    padding: 15px;
+  }
+}
+
+/* General Section Styles */
+.cv-section {
+  background-color: #eee6ffbc; /* Light purple background */
+  padding: 5rem 0;
+}
+
+h2 {
+  color: #6a1b9a; /* Purple text */
+}
+
+.profile-card {
+  background: #ffffff; /* White card */
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info li {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.icon-link {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: white;
+  text-align: center;
+  line-height: 40px;
+  margin: 0 5px;
+}
+
+.icon-link.twitter {
+  background-color: #1da1f2;
+}
+
+.icon-link.github {
+  background-color: #333;
+}
+
+.icon-link.linkedin {
+  background-color: #0a66c2;
+}
+
+.cv-details {
+  background: #ffffff; /* White card */
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+hr {
+  border-top: 1px solid #e0e0e0;
+  margin: 1.5rem 0;
+}
+
+ul {
+  padding-left: 1.5rem;
+}
+
+ul li {
+  margin-bottom: 0.5rem;
+}
+
+
+#skills .unique-card {
+  background-color: #d5dfffff !important; /* Pale color for this specific card */
+}
+
+
+.full-width-section {
+  width: 100vw; /* Full viewport width */
+  background-color: #eee6ffbc; /* Light purple color */
+  padding: 50px 0; /* Adjust padding for vertical spacing */
+}
+
+.bg-light-purple {
+  background-color: #eee6ffbc; /* Optional additional class for reusability */
+}
+
+.cv-color {
+  background-color: #d5dfffff; /* #f4f5ffff #eee6ffbc #8c85ffff Optional additional class for reusability */
+}
+
+.about-color {
+  background-color: #a4baffff; /* #663ce4ff  #343a40*/
+}
